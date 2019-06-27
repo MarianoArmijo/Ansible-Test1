@@ -2,7 +2,7 @@ version: '3.6'
 services:
     openssh1:
       # !!!ATENCIÓN¡¡¡ - Validar la versión a instalar.
-      image: armijomariano/ssh:0.0.1
+      image: armijomariano/ssh:0.0.2
       container_name: openssh1
       restart: always
 # REVISAR Hostname de la máquina
@@ -18,7 +18,7 @@ services:
 
     openssh2:
       # !!!ATENCIÓN¡¡¡ - Validar la versión a instalar.
-      image: armijomariano/ssh:0.0.1
+      image: armijomariano/ssh:0.0.2
       container_name: openssh2
       restart: always
 # REVISAR Hostname de la máquina
@@ -34,7 +34,7 @@ services:
 
     openssh3:
       # !!!ATENCIÓN¡¡¡ - Validar la versión a instalar.
-      image: armijomariano/ssh:0.0.1
+      image: armijomariano/ssh:0.0.2
       container_name: openssh3
       restart: always
 # REVISAR Hostname de la máquina

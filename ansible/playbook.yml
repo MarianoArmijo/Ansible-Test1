@@ -3,7 +3,8 @@
 
   tasks:
   - name: Show hostname group1.
-    action: command hostname
+    #action: command hostname
+    action: ping
 
 - hosts: group2
   remote_user: root
