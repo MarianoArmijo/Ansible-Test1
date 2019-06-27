@@ -1,0 +1,17 @@
+[group1]
+ssh1 ansible_host=192.168.0.2 ansible_port=22 ansible_user=root ansible_password=ansibletest
+ssh2 ansible_host=192.168.0.3 ansible_port=22 ansible_user=root ansible_password=ansibletest
+
+[group2]
+ssh1 ansible_host=192.168.0.2 ansible_port=22 ansible_user=root ansible_password=ansibletest
+ssh3 ansible_host=192.168.0.4 ansible_port=22 ansible_user=root ansible_password=ansibletest
+
+[group3]
+ssh2 ansible_host=192.168.0.3 ansible_port=22 ansible_user=root ansible_password=ansibletest
+ssh3 ansible_host=192.168.0.4 ansible_port=22 ansible_user=root ansible_password=ansibletest
+
+[allgroups]
+ssh1 ansible_host=192.168.0.2 ansible_port=22 ansible_user=root ansible_password=ansibletest
+ssh2 ansible_host=192.168.0.3 ansible_port=22 ansible_user=root ansible_password=ansibletest
+ssh3 ansible_host=192.168.0.4 ansible_port=22 ansible_user=root ansible_password=ansibletest
+

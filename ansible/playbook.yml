@@ -1,0 +1,27 @@
+- hosts: group1
+  remote_user: root
+
+  tasks:
+  - name: Show hostname group1.
+    action: command hostname
+
+- hosts: group2
+  remote_user: root
+
+  tasks:
+  - name: Show hostname group2.
+    action: command hostname
+
+- hosts: group3
+  remote_user: root
+
+  tasks:
+  - name: Show hostname group3.
+    action: command hostname
+
+- hosts: allgroups
+  remote_user: root
+
+  tasks:
+  - name: Show hostname allgroups.
+    action: command hostname
