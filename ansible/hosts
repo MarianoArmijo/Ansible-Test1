@@ -1,0 +1,25 @@
+ssh1 ansible_host=192.168.0.2 ansible_port=22
+ssh2 ansible_host=192.168.0.3 ansible_port=22
+ssh3 ansible_host=192.168.0.4 ansible_port=22
+
+[group1]
+ssh1
+ssh2
+
+[group2]
+ssh1
+ssh3
+
+[group3]
+ssh2
+ssh3
+
+[allgroups]
+ssh1
+ssh2
+ssh3
+
+[all:vars]
+ansible_connection=ssh
+ansible_ssh_user=root
+ansible_ssh_pass=ansibletest

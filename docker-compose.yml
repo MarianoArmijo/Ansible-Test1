@@ -1,0 +1,56 @@
+version: '3.6'
+services:
+    openssh1:
+      # !!!ATENCIÓN¡¡¡ - Validar la versión a instalar.
+      image: armijomariano/ssh:0.0.2
+      container_name: openssh1
+      restart: always
+# REVISAR Hostname de la máquina
+      hostname: 'openssh1'
+      #environment:
+      ports:
+        - "2220:22"
+
+      privileged: true
+      networks:
+         ansible_net:
+             ipv4_address: 192.168.0.2
+
+    openssh2:
+      # !!!ATENCIÓN¡¡¡ - Validar la versión a instalar.
+      image: armijomariano/ssh:0.0.2
+      container_name: openssh2
+      restart: always
+# REVISAR Hostname de la máquina
+      hostname: 'openssh2'
+      #environment:
+      ports:
+        - "2221:22"
+
+      privileged: true
+      networks:
+         ansible_net:
+             ipv4_address: 192.168.0.3
+
+    openssh3:
+      # !!!ATENCIÓN¡¡¡ - Validar la versión a instalar.
+      image: armijomariano/ssh:0.0.2
+      container_name: openssh3
+      restart: always
+# REVISAR Hostname de la máquina
+      hostname: 'openssh3'
+      #environment:
+      ports:
+        - "2222:22"
+
+      privileged: true
+      networks:
+         ansible_net:
+             ipv4_address: 192.168.0.4
+
+networks:
+    ansible_net:
+        ipam:
+            driver: default
+            config:
+                - subnet: 192.168.0.0/24
